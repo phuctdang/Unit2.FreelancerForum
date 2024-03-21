@@ -66,13 +66,15 @@ addFreelancers();
 const addFreelancersIntervalId = setInterval(addFreelancers, 100000);
 
   // Create a function to find the mean price all all the freelancers
-  const meanPrice = () => {
+  const avgPrice = () => {
     const totalPrice = freeLancers.reduce((total, currentPrice) => {
       return total + currentPrice.price
     }, 0)
-    return totalPrice
+    const totalLancers = freeLancers.length
+    const meanPrice = totalPrice / totalLancers 
+    return Math.round(meanPrice * 100) / 100
   };
 
-  console.log(meanPrice())
+  console.log(avgPrice())
 
     // Update this mean price as new freelancers are added to the array 
