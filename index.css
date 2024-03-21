@@ -1,0 +1,10 @@
+.border {
+  display: flex;
+  border-style: solid;
+  border-color: black;
+  margin: 5px 5px;
+  font-size: large;
+  font-weight: bold;
+  color:antiquewhite;
+  margin-right: 70%;
+}
